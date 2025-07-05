@@ -1,0 +1,46 @@
+services:
+
+   react:
+      container_name: enterbridge-react
+      build: /React/ProductCatalog/.
+      restart: always
+      environment:
+         VITE_API_URL: http://localhost:5001
+      ports:
+         - "5174:5173"
+      expose:
+         - 5173
+         - 5174
+      depends_on:
+         - springboot
+         
+   springboot:
+      container_name: enterbridge-springboot
+      build: .
+      environment:
+         DB_URL: jdbc:postgresql://postgres:5432/postgres
+      ports: 
+         - "5001:5000"
+      expose:
+         - 5000
+         - 5001
+      depends_on:
+         - postgres
+         
+   postgres:
+      container_name: enterbridge-postgres
+      build: ./Postgres/
+      restart: always
+      environment:
+         POSTGRES_USER: postgres
+         POSTGRES_PASSWORD: 1234
+      ports:
+         - "5433:5432"
+      expose:
+         - 5432
+         - 5433
+      volumes:
+         - data_sql:/var/lib/postgresql/data
+
+volumes:
+   data_sql:

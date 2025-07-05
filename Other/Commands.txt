@@ -1,0 +1,33 @@
+Springboot app
+
+1. Created project structure using Create Springboot application via Eclipse, can also use https://start.spring.io/
+
+From folder root (\Enterbridge), execute the following in order
+1. To run unit tests and package code into jar --->  mvn clean package
+2. To run Springboot application --->  java -jar .\target\Enterbridge-0.0.1.jar
+
+
+React app
+1. npm create vite@latest  --> creates and initializes project
+
+From folder root (\React\Product Catalog front end), 
+1. To run unit tests ---> npn run test
+2. To run React app ---> npm run dev
+
+Dockerize DB
+1.  Pull Postgres image (17.5) from DockerHub on Docker Desktop or run in terminal ---> docker run --name enterbridge-postgres -e POSTGRES_PASSWORD=1234 -p 5433:5432 -d postgres:17.5
+2. Connect to db using PGAdmin or terminal
+3. Run Sql script (create_insert.sql) to create and initialize db table (product)
+
+Dockerize Springboot app
+1.  Create Dockerfile in root directory
+	specify base image ---> FROM amazoncorretto:21-alpine-jdk  
+	copy jar file into image  --> COPY target/Enterbridge-0.0.1.jar app.jar
+	specify command to run app upon starting the container --> ENTRYPOINT [ "java", "-jar", "app.jar" ]
+2.  Create image, run docker build from root directory ---> docker build --tag=springboot .
+3.  Start container, run docker run from root directory ---> docker run --name enterprice-springboot -p 5001:5000 -d springboot:latest
+
+
+Create docker-compose file:
+1. run --> "docker compose up" or "docker-compose up --build"
+2. in docker-compose.yml, react should connect to localhost for the APIs since the app is served from the browser and not the container
