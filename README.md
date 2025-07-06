@@ -114,3 +114,12 @@ Download files from Github -- git clone https://github.com/antonvalderrama/Enter
 2.  Navigate to React/ProductCatalog and run 'npm install'.  This will download the dependencies to run the app.
 3.  To run the app locally, run 'npm run dev'.  This will start the Vite server.
 4.  Access the UI via http://localhost:5173/
+
+### Improvements (TODO)
+1.  Make columns sortable by clicking the headers.
+2.  Improve products table.
+    1.  Add page/table for Brand Summary Count.
+    2.  Limit number of displayed products and add pagination.
+    3.  Add image of product, display product details and image in separate page.
+3.  Add more unit tests --> One for each additional Java class and React component.
+4.  Improve CSS.
