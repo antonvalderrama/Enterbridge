@@ -2,7 +2,9 @@
 
 Download files from Github -- git clone https://github.com/antonvalderrama/Enterbridge.git
 
-#### 1.  Springboot application files are in ./src/main/java.  The application has the following endpoints:
+#### 1.  Springboot application files are in ./src/main/java.  The application has the following endpoints.  
+If you used Docker to run these apps in containers, please use port 5001 to hit the endpoints (ie http://localhost:5001/products).  When running outside Docker, use port 5000.  I intentionally differentiated the Docker port from the default app port.  These are configured in the docker-compose.yml file.
+    
     1.  GET /products  --  retrieves all the products from the db.
 
         Sample response:
