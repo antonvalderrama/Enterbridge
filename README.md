@@ -111,7 +111,7 @@ Download files from Github -- git clone https://github.com/antonvalderrama/Enter
        
 #### React application
 1.  Install Node 10.9.2 (This is what I have installed)
-2.  Navigate to React/ProductCatalog and run '*npm install*'.  This will download the dependencies to run the app.
+2.  Navigate to React/ProductCatalog and run '**npm install**'.  This will download the dependencies to run the app.
 3.  To run the app locally, run '**npm run dev**'.  This will start the Vite server.
 4.  Access the UI via http://localhost:5173/
 
