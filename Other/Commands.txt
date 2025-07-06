@@ -11,7 +11,7 @@ React app
 1. npm create vite@latest  --> creates and initializes project
 
 From folder root (\React\Product Catalog front end), 
-1. To run unit tests ---> npn run test
+1. To run unit tests ---> npm run test
 2. To run React app ---> npm run dev
 
 Dockerize DB
