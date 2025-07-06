@@ -88,12 +88,12 @@ Download files from Github -- git clone https://github.com/antonvalderrama/Enter
 #### 3.  React files are in ./React
 
 ### App execution Via Docker Images
-1.  In the root directory, run 'mvn clean package' to run unit tests and generate /target/Enterbridge-0.0.1.jar
+1.  In the root directory, run '**mvn clean package**' to run unit tests and generate /target/Enterbridge-0.0.1.jar
 2.  Dockerfiles have been provided:
     1. Postgres - ./Postgres/Dockerfile
     2. Springboot app - ./Dockerfile
     3. React app - ./React/ProductCatalog/Dockerfile
-3.  docker-compose.yml is also in the root directory, run 'docker-compose up --build' to create the docker images and run the containers.
+3.  docker-compose.yml is also in the root directory, run '**docker-compose up --build**' to create the docker images and run the containers.
 4.  Access the UI via http://localhost:5174
 
 ### Manual Installation / Execution
@@ -106,13 +106,13 @@ Download files from Github -- git clone https://github.com/antonvalderrama/Enter
 5.  Make sure to run Postgres on port 5432, the Springboot application is dependent on this.
 
 #### Springboot application
-1.  To compile and build the jar file, run 'mvn package', this will also run the unit test (TestProductServiceImpl.java).  The jar file will be generated in the ./target directory
+1.  To compile and build the jar file, run '**mvn clean package**', this will also run the unit test (TestProductServiceImpl.java).  The jar file will be generated in the ./target directory
 3.  To run the app in your machine, you can execute 'java -jar ./target/Enterbridge-0.0.1.jar'
        
 #### React application
 1.  Install Node 10.9.2 (This is what I have installed)
-2.  Navigate to React/ProductCatalog and run 'npm install'.  This will download the dependencies to run the app.
-3.  To run the app locally, run 'npm run dev'.  This will start the Vite server.
+2.  Navigate to React/ProductCatalog and run '*npm install*'.  This will download the dependencies to run the app.
+3.  To run the app locally, run '**npm run dev**'.  This will start the Vite server.
 4.  Access the UI via http://localhost:5173/
 
 ### Improvements (TODO)
