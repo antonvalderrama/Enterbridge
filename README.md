@@ -123,3 +123,6 @@ Download files from Github -- git clone https://github.com/antonvalderrama/Enter
     3.  Add image of product, display product details and image in separate page.
 3.  Add more unit tests --> One for each additional Java class and React component.
 4.  Improve CSS.
+5.  Add limit parameter to GET /products endpoint, so not all the products are returned
+6.  Add total product count to GET /products/brand-summary so we know how many total products are available.
+7.  Add unit count to Product table, so we know how many units we have of a certain product.
