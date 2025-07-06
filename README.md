@@ -121,6 +121,7 @@ Download files from Github -- git clone https://github.com/antonvalderrama/Enter
     1.  Add page/table for Brand Summary Count.
     2.  Limit number of displayed products and add pagination.
     3.  Add image of product, display product details and image in separate page.
+    4.  Maybe change mouse icon when hovering on the table rows.  Make it where the user knows that the row can be clicked.  Maybe make one of the fields into a link?
 3.  Add more unit tests --> One for each additional Java class and React component.
 4.  Improve CSS.
 5.  Add limit parameter to GET /products endpoint, so not all the products are returned
